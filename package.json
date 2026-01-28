@@ -1,0 +1,9 @@
+{
+  "name": "tokenyodha-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "commonjs",
+  "dependencies": {
+    "agora-token": "^2.0.5"
+  }
+}
