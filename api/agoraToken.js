@@ -22,8 +22,8 @@ module.exports = async function handler(req, res) {
       return;
     }
 
-    const appId = process.env.AGORA_APP_ID;
-    const appCertificate = process.env.AGORA_APP_CERTIFICATE;
+    const appId = String(process.env.AGORA_APP_ID || '').trim();
+    const appCertificate = String(process.env.AGORA_APP_CERTIFICATE || '').trim();
     if (!appId || !appCertificate) {
       res.status(500).send('Missing AGORA_APP_ID / AGORA_APP_CERTIFICATE');
       return;
